@@ -27,6 +27,6 @@ public class PlayerController {
 
     @GetMapping
     public List<Player> getPlayersByName(){
-        return playerService.getPlayersByName("Gabriel Dos Santos");
+        return playerService.getPlayersByName("Gabriel");
     }
 }

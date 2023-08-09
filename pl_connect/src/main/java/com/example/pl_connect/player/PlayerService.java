@@ -26,9 +26,9 @@ public class PlayerService {
                 .collect(Collectors.toList());
     }
 
-    public List<Player> getPlayersByName(String playerName) {
+    public List<Player> getPlayersByName(String searchText) {
         return playerRepository.findAll().stream()
-                .filter(player -> playerName.equals(player.getName())) // Modify this condition as per your Player class structure
+                .filter(player -> player.getName().toLowerCase().contains(searchText.toLowerCase()))
                 .collect(Collectors.toList());
     }
 }
