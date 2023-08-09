@@ -16,8 +16,17 @@ public class PlayerController {
     public PlayerController(PlayerService playerService) {
         this.playerService = playerService;
     }
-    @GetMapping
     public List<Player> getPlayers() {
+
         return playerService.getPlayers();
+    }
+
+    public List<Player> getPlayersByTeam(){
+        return playerService.getPlayersFromTeam("Arsenal");
+    }
+
+    @GetMapping
+    public List<Player> getPlayersByName(){
+        return playerService.getPlayersByName("Gabriel Dos Santos");
     }
 }
