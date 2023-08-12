@@ -1,0 +1,171 @@
+.nav-bar { 
+    background: #184E77; 
+    opacity: 0.8;
+    width: 100%; 
+    height: 100px; 
+    position: absolute; 
+    top: 0; 
+    z-index: 3;  
+    display: flex; 
+    align-items: center;
+    
+    .logo{
+        padding: 8px 0; 
+        
+        img { 
+            display: block; 
+            margin: 8px auto; 
+            margin-left: 4px;
+            width: 40px; 
+            height: auto;
+            
+            &.sub-logo { 
+                width: 50px; 
+            }
+        }
+    }
+    nav { 
+        display: flex; 
+        align-items: center;
+        // display: block;
+        // text-align: center; 
+        // position: absolute; 
+        // height: 210px; 
+        // top: 50%; 
+        // margin-top: -120px; 
+        // width: 100%; 
+
+        a { 
+            font-size: 22px; 
+            color: #f0f0f083;
+            display: block; 
+            // line-height: 51px; 
+            // height: 51px; 
+            margin: 0 15px; 
+            position: relative; 
+            text-decoration: none; 
+
+            i { 
+                transition: all 0.3s ease-out; 
+            }
+
+            &:hover { 
+                color: #fff;
+                
+                svg { 
+                    opacity: 0; 
+                }
+
+                &:after { 
+                    opacity: 1; 
+                }
+            }
+
+            &:after { 
+                content: ""; 
+                font-size: 9px; 
+                letter-spacing: 2px; 
+                position: absolute; 
+                bottom: -20px; 
+                display: block; 
+                width: 100%; 
+                text-align: center; 
+                opacity: 0; 
+                transition: all 0.3s ease-out;
+            }
+
+            &:first-child { 
+                &::after { 
+                    content: 'HOME'; 
+                }
+            }
+        }
+
+        a.about-link { 
+            &:after { 
+                content: "ABOUT";
+            }
+        }
+
+        a.work-link { 
+            &:after { 
+                content: "WORK";
+            }
+        }
+
+        a.contact-link { 
+            &:after { 
+                content: "CONTACT"; 
+            }
+        }
+        a.portfolio-link { 
+            &:after { 
+                content: "PORTFOLIO"; 
+                font-size: 7px;
+            }
+        }
+
+        a.active{
+            svg{
+                color: #fff; 
+            }
+        }
+    }
+}
+.hamburger-icon, 
+.close-icon { 
+    display: none;
+}
+@media screen and (max-width: 1000px){
+    .nav-bar{
+        background: transparent; 
+        position: initial; 
+        height: auto; 
+        min-height: auto;
+
+        ul, nav{
+            display: none;
+        }
+
+        nav{
+            width: 100%; 
+            height: 100%; 
+            background: #184E77;
+            top: 0; 
+            left: 0; 
+            position: fixed; 
+            z-index: 2; 
+            margin: 0;
+
+            a {
+                display: flex; 
+                justify-content: center;
+                align-items: center; 
+            }
+
+            a:after{
+                opacity: 1;
+                position: initial;
+                width: auto;
+                margin-left: 10px;
+            }
+
+            a svg {
+                opacity: 1 !important;
+            }
+
+            &.mobile-show { 
+                display: block;
+            }
+        }
+        .hamburger-icon, 
+        .close-icon {
+            display: block;
+            position: absolute; 
+            top: 15px; 
+            right: 15px; 
+        }
+
+    }
+  }
+  
