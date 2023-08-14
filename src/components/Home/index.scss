@@ -7,12 +7,12 @@
         transform: translateY(-50%); 
         width: 40%; 
         max-height: 90%; 
+        display: absolute;
     }
     h1{
         color: #fff; 
         font-size: 53px; 
         margin: 0; 
-        font-family: "Coolvetica"; 
         font-weight: 400; 
         cursor: pointer;
 
@@ -73,10 +73,10 @@
     }
 }
 
-@media screen and (max-width: 1210px){
+@media screen and (max-width: 1400px){
     .home-page{
         h1{
-            font-size: 30px;
+            font-size: 39px;
         }
     }
 }
@@ -88,33 +88,14 @@
             justify-content: center;
         }
         .text-zone{
-            position: initial;
+            position: block;
             width: 100%; 
             transform: none;
             padding: 10px;
             box-sizing: border-box;
             display: inline-block;
             text-align: left;
-        }
-
-        .logo-container {
-            position: relative; 
-            width: 250px;
-            height: auto; 
-            top: 50px; 
-            right: 0; 
-            box-sizing: border-box; 
-            margin: auto; 
-            left: 0; 
-
-            svg{
-                position: absolute; 
-                top: auto; 
-                right: auto; 
-                bottom: auto; 
-                left: 0;
-                margin: auto;
-            }
+            padding-top: 100px;
         }
 
         .flat-button{

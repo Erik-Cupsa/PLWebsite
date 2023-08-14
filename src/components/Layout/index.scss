@@ -21,10 +21,10 @@
     animation-delay: 1s; 
 }
 
-.container.work-page,
-.container.contact-page,
-.container.about-page,
-.container.portfolio-page {
+.container.search-page,
+.container.position-page,
+.container.teams-page,
+.container.nation-page {
   .images-container {
     .image-box {
       animation: slideInFromBottom 2s forwards;
@@ -179,7 +179,7 @@
   }
 }
 
-.container.work-page {
+.container.search-page {
   .text-zone{
     .timeline-container{
       animation: slideInFromBottom 5s forwards;
@@ -198,10 +198,10 @@
     height: auto; 
     min-height: auto;
 
-    &.about-page, 
-    &.contact-page, 
-    &.work-page, 
-    &.portfolio-page{
+    &.teams-page, 
+    &.position-page, 
+    &.search-page, 
+    &.nation-page{
       .text-zone{
         position: initial; 
         transform: none; 
