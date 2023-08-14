@@ -1,7 +1,7 @@
 import './index.scss'
 import { Link, NavLink } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faUser, faEnvelope, faSuitcase, faFolderOpen, faBars, faClose } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faSearch, faTshirt, faBars, faClose, faUsers, faFlag } from '@fortawesome/free-solid-svg-icons'
 import LogoE from '../../assets/images/PL.webp'
 import LogoSubtitle from '../../assets/images/sub-logo.png'
 import { useState } from 'react'
@@ -19,16 +19,16 @@ const Sidebar = () => {
                     <FontAwesomeIcon icon = {faHome}  onClick={() => setShowNav(false)} />
                 </NavLink>
                 <NavLink exact="true" activeclassname = "active" className = "about-link" to="/about">
-                    <FontAwesomeIcon icon = {faUser} onClick={() => setShowNav(false)}/>
+                    <FontAwesomeIcon icon = {faUsers} onClick={() => setShowNav(false)}/>
                 </NavLink>
                 <NavLink exact="true" activeclassname = "active" className = "work-link" to="/work">
-                    <FontAwesomeIcon icon = {faSuitcase} onClick={() => setShowNav(false)} />
+                    <FontAwesomeIcon icon = {faSearch} onClick={() => setShowNav(false)} />
                 </NavLink>
                 <NavLink exact="true" activeclassname = "active" className = "portfolio-link" to="/portfolio">
-                    <FontAwesomeIcon icon = {faFolderOpen} onClick={() => setShowNav(false)} />
+                    <FontAwesomeIcon icon = {faFlag} onClick={() => setShowNav(false)} />
                 </NavLink>
                 <NavLink exact="true" activeclassname = "active" className = "contact-link" to="/contact">
-                    <FontAwesomeIcon icon = {faEnvelope}  onClick={() => setShowNav(false)}/>
+                    <FontAwesomeIcon icon = {faTshirt}  onClick={() => setShowNav(false)}/>
                 </NavLink>
                 <FontAwesomeIcon icon = {faClose} size = "3x" className="close-icon" onClick={() => setShowNav(false)} />
             </nav>

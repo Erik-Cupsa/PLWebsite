@@ -29,14 +29,14 @@
     nav { 
         display: flex; 
         align-items: center;
-        justify-content: center; 
-        margin: 20%;
-        padding-left: 200px;
+        justify-content: space-evenly; 
+        padding-left: 0;
+        flex-grow: 1;
         a { 
             font-size: 22px; 
             color: #f0f0f083;
             display: block; 
-            margin: 0 50%; 
+            margin: 0 40px; 
             position: relative; 
             text-decoration: none; 
 
@@ -58,10 +58,10 @@
 
             &:after { 
                 content: ""; 
-                font-size: 9px; 
+                font-size: 15px; 
                 letter-spacing: 2px; 
                 position: absolute; 
-                bottom: -20px; 
+                bottom: 0; 
                 display: block; 
                 width: 100%; 
                 text-align: center; 
@@ -96,7 +96,6 @@
         a.portfolio-link { 
             &:after { 
                 content: "PORTFOLIO"; 
-                font-size: 7px;
             }
         }
 
@@ -111,7 +110,7 @@
 .close-icon { 
     display: none;
 }
-@media screen and (max-width: 700px){
+@media screen and (max-width: 1000px){
     .nav-bar{
         position: initial; 
         height: auto; 
