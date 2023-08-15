@@ -4,7 +4,7 @@ import "./index.scss";
 import AnimatedLetters from "../AnimatedLetters";
 import teamData from "../../data/teams.json";
 
-const Portfolio = () => {
+const Teams = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
 
     useEffect(() => {
@@ -17,17 +17,17 @@ const Portfolio = () => {
         }
     });
 
-    const renderPortfolio = (portfolio) => { 
+    const renderTeam = (team) => { 
         return (
             <div className = "images-container">
                 {
-                    portfolio.map((port, idx) => {
+                    team.map((team, idx) => {
                         return (
                             <div key={idx} className="image-box">
-                                <img src={port.cover} alt="portfolio" className = "portfolio-image"/>
+                                <img src={team.cover} alt="teams" className = "teams-image"/>
                                 <div className="content">
-                                    <p className="title">{port.title}</p>
-                                    <button className="btn" onClick={() => window.open(port.url)}>View</button>
+                                    <p className="title">{team.title}</p>
+                                    <button className="btn" onClick={() => window.open(team.url)}>View</button>
                                 </div>
                             </div>
                         )
@@ -38,15 +38,15 @@ const Portfolio = () => {
     }
     return (
         <>
-            <div className="container portfolio-page">
+            <div className="container teams-page">
                 <h1 className = "page-title">
-                    <AnimatedLetters letterClass = {letterClass} strArray={"Portfolio".split("")} idx={15}/>
+                    <AnimatedLetters letterClass = {letterClass} strArray={"Teams".split("")} idx={15}/>
                 </h1>
-                <div>{renderPortfolio(teamData.portfolio)}</div>
+                <div>{renderTeam(teamData.teams)}</div>
             </div>
             <Loader type="pacman"/>
         </>
     );
 }
 
-export default Portfolio
+export default Teams

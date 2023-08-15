@@ -1,19 +1,20 @@
-.portfolio-page {
+.teams-page {
     padding-left: 100px;
     padding-right: 50px;
-    width: calc(100% - 150px);
+    width: calc(100% - 100px);
     position: initial;
     height: 100%;
     overflow: auto;
 
     h1.page-title {
         margin-left: 100px;
-        margin-top: 100px;
+        margin-top: 120px;
+        color: #fff;
     }
 
     .images-container {
         display: flex;
-        gap: 15px;
+        gap: 50px;
         flex-wrap: wrap;
         padding-bottom: 100px;
         margin-left: 50px;
@@ -22,12 +23,12 @@
     .image-box {
         position: relative;
         flex: 1 1 20%;
-        height: 400px;
+        height: 300px;
         overflow: hidden;
         border-radius: 10px;
-        max-width: calc(30% );
+        max-width: calc(20% );
 
-        .portfolio-image {
+        .teams-image {
             position: absolute;
             z-index: 2;
             width: 100%;
@@ -113,14 +114,14 @@
     }
 }
 @media screen and (max-width: 1100px){
-    .container.portfolio-page{
+    .container.teams-page{
         .images-container{
             margin-left: -50px;
         }
     }
 }
 @media screen and (max-width: 700px){
-    .container.portfolio-page{
+    .container.teams-page{
         width: 100%; 
         padding: 20px; 
         box-sizing: border-box; 
@@ -140,7 +141,7 @@
             padding-bottom: 100px;
             margin-left: -10px;
             width:90vh;
-            height: 55vh; /* Set the height to full viewport height */
+            height: 55vh;
           }
     }
 }
