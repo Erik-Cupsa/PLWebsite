@@ -1,0 +1,104 @@
+{
+    "portfolio": [
+        {
+            "cover": "/teams/Arsenal.png", 
+            "title": "Arsenal", 
+            "url": "http://localhost:3000"
+        }, 
+        {
+            "cover": "/teams/AstonVilla.png", 
+            "title": "Aston Villa", 
+            "url": "http://localhost:3000"
+        },
+        {
+            "cover": "/teams/Bournemouth.png", 
+            "title": "Bournemouth", 
+            "url": "http://localhost:3000"
+        },
+        {
+            "cover": "/teams/Brentford.png", 
+            "title": "Brentford", 
+            "url": "http://localhost:3000"
+        },
+        {
+            "cover": "/teams/Brighton.png", 
+            "title": "Brighton", 
+            "url": "http://localhost:3000"
+        },
+        {
+            "cover": "/teams/Chelsea.png", 
+            "title": "Chelsea", 
+            "url": "http://localhost:3000"
+        },
+        {
+            "cover": "/teams/CrystalPalace.png", 
+            "title": "Crystal Palace", 
+            "url": "http://localhost:3000"
+        }, 
+        {
+            "cover": "/teams/Everton.png", 
+            "title": "Everton", 
+            "url": "http://localhost:3000"
+        },
+        {
+            "cover": "/teams/Fulham.png", 
+            "title": "Fulham", 
+            "url": "http://localhost:3000"
+        },
+        {
+            "cover": "/teams/LeedsUnited.png", 
+            "title": "Leeds United", 
+            "url": "http://localhost:3000"
+        },
+        {
+            "cover": "/teams/LeicesterCity.png", 
+            "title": "Leicester City", 
+            "url": "http://localhost:3000"
+        },
+        {
+            "cover": "/teams/Liverpool.png", 
+            "title": "Liverpool", 
+            "url": "http://localhost:3000"
+        },
+        {
+            "cover": "/teams/ManchesterCity.png", 
+            "title": "Manchester City", 
+            "url": "http://localhost:3000"
+        },
+        {
+            "cover": "/teams/ManchesterUnited.png", 
+            "title": "Manchester United", 
+            "url": "http://localhost:3000"
+        },
+        {
+            "cover": "/teams/Newcastle.png", 
+            "title": "Newcastle", 
+            "url": "http://localhost:3000"
+        },
+        {
+            "cover": "/teams/NottinghamForest.png", 
+            "title": "Nottingham Forest", 
+            "url": "http://localhost:3000"
+        },
+        {
+            "cover": "/teams/Southampton.png", 
+            "title": "Southampton", 
+            "url": "http://localhost:3000"
+        },
+        {
+            "cover": "/teams/Tottenham.png", 
+            "title": "Tottenham", 
+            "url": "http://localhost:3000"
+        },
+        {
+            "cover": "/teams/WestHam.png", 
+            "title": "West Ham", 
+            "url": "http://localhost:3000"
+        },
+        {
+            "cover": "/teams/Wolves.png", 
+            "title": "Wolves", 
+            "url": "http://localhost:3000"
+        }
+    ]
+}
