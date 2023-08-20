@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Loader from "react-loaders";
+import { Link } from 'react-router-dom';
 import "./index.scss";
 import AnimatedLetters from "../AnimatedLetters";
 import teamData from "../../data/teams.json";
@@ -17,25 +18,23 @@ const Teams = () => {
         }
     });
 
-    const renderTeam = (team) => { 
+    const renderTeam = (teams) => { 
         return (
-            <div className = "images-container">
-                {
-                    team.map((team, idx) => {
-                        return (
-                            <div key={idx} className="image-box">
-                                <img src={team.cover} alt="teams" className = "teams-image"/>
-                                <div className="content">
-                                    <p className="title">{team.title}</p>
-                                    <button className="btn" onClick={() => window.open(team.url)}>View</button>
-                                </div>
-                            </div>
-                        )
-                    })
-                }
-            </div>
+          <div className="images-container">
+            {teams.map((team, idx) => (
+              <div key={idx} className="image-box">
+                <img src={team.cover} alt="teams" className="teams-image" />
+                <div className="content">
+                  <p className="title">{team.title}</p>
+                  <Link className="btn" to={`/data?team=${encodeURIComponent(team.title)}`}>
+                    View
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
         )
-    }
+      }
     return (
         <>
             <div className="container teams-page">

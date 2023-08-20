@@ -3,11 +3,11 @@
         {
             "cover": "/teams/Arsenal.png", 
             "title": "Arsenal", 
-            "url": "http://localhost:3000"
+            "url": "http://localhost:3000/data"
         }, 
         {
             "cover": "/teams/AstonVilla.png", 
-            "title": "Aston Villa", 
+            "title": "Aston-Villa", 
             "url": "http://localhost:3000"
         },
         {
@@ -32,7 +32,7 @@
         },
         {
             "cover": "/teams/CrystalPalace.png", 
-            "title": "Crystal Palace", 
+            "title": "Crystal-Palace", 
             "url": "http://localhost:3000"
         }, 
         {
@@ -47,12 +47,12 @@
         },
         {
             "cover": "/teams/LeedsUnited.png", 
-            "title": "Leeds United", 
+            "title": "Leeds-United", 
             "url": "http://localhost:3000"
         },
         {
             "cover": "/teams/LeicesterCity.png", 
-            "title": "Leicester City", 
+            "title": "Leicester-City", 
             "url": "http://localhost:3000"
         },
         {
@@ -62,12 +62,12 @@
         },
         {
             "cover": "/teams/ManchesterCity.png", 
-            "title": "Manchester City", 
+            "title": "Manchester-City", 
             "url": "http://localhost:3000"
         },
         {
             "cover": "/teams/ManchesterUnited.png", 
-            "title": "Manchester United", 
+            "title": "Manchester-United", 
             "url": "http://localhost:3000"
         },
         {
@@ -77,7 +77,7 @@
         },
         {
             "cover": "/teams/NottinghamForest.png", 
-            "title": "Nottingham Forest", 
+            "title": "Nottingham-Forest", 
             "url": "http://localhost:3000"
         },
         {
@@ -92,7 +92,7 @@
         },
         {
             "cover": "/teams/WestHam.png", 
-            "title": "West Ham", 
+            "title": "West-Ham", 
             "url": "http://localhost:3000"
         },
         {

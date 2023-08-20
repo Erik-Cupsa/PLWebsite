@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './components/Home';
 import Teams from './components/Teams';
+import DataHandling from './components/DataHandling';
 // import Contact from './components/Contact';
 // import Portfolio from './components/Portfolio';
 // import Work from './components/Work';
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="teams" element={<Teams />} />
+          <Route path="data" element={<DataHandling />} />
           {/* <Route path="about/tech" element={<Tech />} />
           <Route path="about/dev" element={<Dev />} />
           <Route path="contact" element={<Contact />} />
