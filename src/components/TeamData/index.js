@@ -8,7 +8,7 @@ const TeamData = () => {
   const [error, setError] = useState(null);
   const [playerData, setPlayerData] = useState([]);
   const [playersToShow, setPlayersToShow] = useState(10);
-  const [letterClass, setLetterClass] = useState('text-animate');
+  const [letterClass] = useState('text-animate');
   
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
