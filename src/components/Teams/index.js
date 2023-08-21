@@ -7,6 +7,8 @@ import teamData from "../../data/teams.json";
 
 const Teams = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
+    const [searchQuery, setSearchQuery] = useState('');
+    const [filteredTeams, setFilteredTeams] = useState([]);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -17,6 +19,17 @@ const Teams = () => {
             clearTimeout(timer);
         }
     });
+
+    useEffect(() => {
+      const filtered = teamData.teams.filter(team =>
+          team.title.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+      setFilteredTeams(filtered);
+  }, [searchQuery]);
+
+  const handleSearchChange = event => {
+      setSearchQuery(event.target.value);
+  };
 
     const renderTeam = (teams) => { 
         return (
@@ -41,7 +54,15 @@ const Teams = () => {
                 <h1 className = "page-title">
                     <AnimatedLetters letterClass = {letterClass} strArray={"Teams".split("")} idx={15}/>
                 </h1>
-                <div>{renderTeam(teamData.teams)}</div>
+                <div className="search-bar">
+                    <input
+                        type="text"
+                        placeholder="Search for teams"
+                        value={searchQuery}
+                        onChange={handleSearchChange}
+                    />
+                </div>
+                <div>{renderTeam(filteredTeams)}</div>
             </div>
             <Loader type="pacman"/>
         </>

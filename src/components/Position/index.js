@@ -54,7 +54,6 @@ const Positions = () => {
             <div className="container teams-page">
                 <h1 className="page-title">
                     <br/>
-                    <br/>
                     <AnimatedLetters letterClass={letterClass} strArray={"Positions".split("")} idx={15}/>
                 </h1>
                 <div className="search-bar">

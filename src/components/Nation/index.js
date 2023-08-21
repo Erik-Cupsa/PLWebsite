@@ -8,6 +8,8 @@ import { ReactCountryFlag } from 'react-country-flag';
 
 const Nations = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
+    const [searchQuery, setSearchQuery] = useState('');
+    const [filteredNations, setFilteredNations] = useState([]);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -18,6 +20,17 @@ const Nations = () => {
             clearTimeout(timer);
         }
     });
+
+    useEffect(() => {
+      const filtered = nationData.nations.filter(nation =>
+          nation.name.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+      setFilteredNations(filtered);
+  }, [searchQuery]);
+
+  const handleSearchChange = event => {
+      setSearchQuery(event.target.value);
+  };
 
     const renderCountryFlags = (countries) => {
         return (
@@ -49,7 +62,15 @@ const Nations = () => {
             <h1 className="page-title">
               <AnimatedLetters letterClass={letterClass} strArray={"Nations".split("")} idx={15} />
             </h1>
-            <div>{renderCountryFlags(nationData.nations)}</div>
+            <div className="search-bar">
+                    <input
+                        type="text"
+                        placeholder="Search for countries"
+                        value={searchQuery}
+                        onChange={handleSearchChange}
+                    />
+                </div>
+                <div>{renderCountryFlags(filteredNations)}</div>
           </div>
           <Loader type="pacman" />
         </>
