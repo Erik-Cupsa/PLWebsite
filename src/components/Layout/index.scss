@@ -33,7 +33,7 @@
   
     @for $i from 1 through 20 {
         .image-box:nth-child(#{$i}) {
-          animation-delay: #{$i}s;
+          animation-delay: #{$i/3}s;
         }
     }
   }
