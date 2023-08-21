@@ -15,7 +15,7 @@ const TeamData = () => {
     const nameValue = params.get('name');
     
     if (teamValue) {
-      axios.get(`http://localhost:8080/api/v1/player?team=${encodeURIComponent(teamValue)}`)
+      axios.get(`https://plconnection-production.up.railway.app/api/v1/player?team=${encodeURIComponent(teamValue)}`)
         .then(response => {
           setPlayerData(response.data);
           setLoading(false);
@@ -25,7 +25,7 @@ const TeamData = () => {
           setLoading(false);
         });
     } else if (nationValue){
-      axios.get(`http://localhost:8080/api/v1/player?nation=${encodeURIComponent(nationValue)}`)
+      axios.get(`https://plconnection-production.up.railway.app/api/v1/player?nation=${encodeURIComponent(nationValue)}`)
       .then(response => {
         setPlayerData(response.data);
         setLoading(false);
@@ -35,7 +35,7 @@ const TeamData = () => {
         setLoading(false);
       });
     } else if (positionValue){
-      axios.get(`http://localhost:8080/api/v1/player?position=${encodeURIComponent(positionValue)}`)
+      axios.get(`https://plconnection-production.up.railway.app/api/v1/player?position=${encodeURIComponent(positionValue)}`)
       .then(response => {
         setPlayerData(response.data);
         setLoading(false);
@@ -45,7 +45,7 @@ const TeamData = () => {
         setLoading(false);
       });
     } else if (nameValue){
-      axios.get(`http://localhost:8080/api/v1/player?name=${encodeURIComponent(nameValue)}`)
+      axios.get(`https://plconnection-production.up.railway.app/api/v1/player?name=${encodeURIComponent(nameValue)}`)
       .then(response => {
         setPlayerData(response.data);
         setLoading(false);
