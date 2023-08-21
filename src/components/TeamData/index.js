@@ -11,6 +11,8 @@ const TeamData = () => {
     const params = new URLSearchParams(window.location.search);
     const teamValue = params.get('team');
     const nationValue = params.get('nation');
+    const positionValue = params.get('position');
+    const nameValue = params.get('name');
     
     if (teamValue) {
       axios.get(`http://localhost:8080/api/v1/player?team=${encodeURIComponent(teamValue)}`)
@@ -24,6 +26,26 @@ const TeamData = () => {
         });
     } else if (nationValue){
       axios.get(`http://localhost:8080/api/v1/player?nation=${encodeURIComponent(nationValue)}`)
+      .then(response => {
+        setPlayerData(response.data);
+        setLoading(false);
+      })
+      .catch(error => {
+        setError(error);
+        setLoading(false);
+      });
+    } else if (positionValue){
+      axios.get(`http://localhost:8080/api/v1/player?position=${encodeURIComponent(positionValue)}`)
+      .then(response => {
+        setPlayerData(response.data);
+        setLoading(false);
+      })
+      .catch(error => {
+        setError(error);
+        setLoading(false);
+      });
+    } else if (nameValue){
+      axios.get(`http://localhost:8080/api/v1/player?name=${encodeURIComponent(nameValue)}`)
       .then(response => {
         setPlayerData(response.data);
         setLoading(false);
