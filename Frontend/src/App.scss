@@ -1,0 +1,14 @@
+$primary-color: #52B69A;
+
+@import 'animate.css'; 
+
+@font-face {
+  font-family: 'Red Hat Display';
+  src: url('../Red_Hat_Display/RedHatDisplay-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+}

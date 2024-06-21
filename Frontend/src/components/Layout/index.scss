@@ -1,0 +1,209 @@
+.page { 
+    width: 100%; 
+    height: 100%; 
+    position: absolute; 
+}
+
+
+
+.container { 
+    width: 100%; 
+    will-change: contents; 
+    height: 100%; 
+    min-height: 566px; 
+    position: absolute; 
+    opacity: 0; 
+    top: 5%; 
+    margin: 0 auto; 
+    z-index: 1; 
+    transform-style: preserve-3d; 
+    animation: fadeIn 1s forwards; 
+    animation-delay: 1s; 
+}
+
+.container.search-page,
+.container.position-page,
+.container.teams-page,
+.container.nation-page {
+  .images-container {
+    .image-box {
+      animation: slideInFromBottom 2s forwards;
+      opacity: 0;
+    }
+  
+    @for $i from 1 through 20 {
+        .image-box:nth-child(#{$i}) {
+          animation-delay: #{$i/3}s;
+        }
+    }
+  }
+  
+  @keyframes slideInFromBottom {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  overflow: auto;
+  max-height: fit-content;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  &::-webkit-scrollbar {
+    background-color: linear-gradient(to bottom, #023e8a 20%, #00b4d8 80%);
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 10px;
+  }
+  table {
+    width: 1000px; 
+  }
+
+    h1 {
+      font-size: 53px;
+      font-family: 'Coolvetica';
+      color: #ffd700;
+      font-weight: 400;
+      margin-top: 0;
+      position: relative;
+      margin-bottom: 40px;
+      left: -10px;
+
+      &:before {
+        font-family: 'La Belle Aurore', cursive;
+        color: #ffd700;
+        font-size: 18px;
+        position: absolute;
+        margin-top: -10px;
+        left: -10px;
+        opacity: 0.6;
+        line-height: 18px;
+      }
+
+      &:after {
+        font-family: 'La Belle Aurore', cursive;
+        color: #ffd700;
+        font-size: 18px;
+        line-height: 18px;
+        position: absolute;
+        left: -30px;
+        bottom: -20px;
+        margin-left: 20px;
+        opacity: 0.6;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      color: #fff;
+      font-family: sans-serif;
+      font-weight: 500;
+      max-width: fit-content;
+      animation: pulse 1s;
+      &:nth-of-type(1) {
+        animation-delay: 1.1s;
+      }
+      &:nth-of-type(2) {
+        animation-delay: 1.2s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: 1.3s;
+      }
+    }
+
+    h2 {
+      font-size: 20px;
+      color: #ffd700;
+      font-family: sans-serif;
+      font-weight: 600;
+      max-width: fit-content;
+      animation: pulse 1s;
+      &:nth-of-type(1) {
+        animation-delay: 1.1s;
+      }
+      &:nth-of-type(2) {
+        animation-delay: 1.2s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: 1.3s;
+      }
+    }
+
+  .text-zone {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35%;
+    vertical-align: middle;
+    display: table-cell;
+    max-height: 90%;
+  }
+  .timeline {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-height: 90%;
+    .vertical-timeline-element-title{
+      left: 10%;
+    }
+  }
+
+  .text-animate-hover {
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container.search-page {
+  .text-zone{
+    .timeline-container{
+      animation: slideInFromBottom 5s forwards;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px){
+  
+  .page{
+    position: relative;
+    min-height: 100vh; 
+  }
+  .container{
+    position: initial; 
+    height: auto; 
+    min-height: auto;
+
+    &.teams-page, 
+    &.position-page, 
+    &.search-page, 
+    &.nation-page{
+      .text-zone{
+        position: initial; 
+        transform: none; 
+        width: 100%;
+        display: block; 
+        padding: 20px; 
+        box-sizing: border-box;
+      }
+    }
+  }
+}

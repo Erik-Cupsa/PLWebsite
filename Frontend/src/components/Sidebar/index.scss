@@ -1,0 +1,164 @@
+.nav-bar { 
+    background: #184E77; 
+    opacity: 0.8;
+    width: 100%; 
+    height: 100px; 
+    position: fixed; 
+    top: 0; 
+    z-index: 3;  
+    display: flex; 
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.9);
+    
+    .logo{
+        padding: 8px 10px; 
+        
+        img { 
+            display: block; 
+            margin: 3px auto; 
+            margin-left: 15px;
+            width: 60px; 
+            height: auto;
+            
+            &.sub-logo { 
+                width: 120px; 
+                margin-left: -5px;
+            }
+        }
+    }
+    nav { 
+        display: flex; 
+        align-items: center;
+        justify-content: space-evenly; 
+        padding-left: 0;
+        flex-grow: 1;
+        a { 
+            font-size: 22px; 
+            color: #f0f0f083;
+            display: block; 
+            margin: 0 40px; 
+            position: relative; 
+            text-decoration: none; 
+
+            i { 
+                transition: all 0.3s ease-out; 
+            }
+
+            &:hover { 
+                color: #fff;
+                
+                svg { 
+                    opacity: 0; 
+                }
+
+                &:after { 
+                    opacity: 1; 
+                }
+            }
+
+            &:after { 
+                content: ""; 
+                font-size: 15px; 
+                letter-spacing: 2px; 
+                position: absolute; 
+                bottom: 0; 
+                display: block; 
+                width: 100%; 
+                text-align: center; 
+                opacity: 0; 
+                transition: all 0.3s ease-out;
+            }
+
+            &:first-child { 
+                &::after { 
+                    content: 'HOME'; 
+                }
+            }
+        }
+
+        a.teams-link { 
+            &:after { 
+                content: "TEAMS";
+            }
+        }
+
+        a.search-link { 
+            &:after { 
+                content: "SEARCH";
+            }
+        }
+
+        a.position-link { 
+            &:after { 
+                content: "POSITION"; 
+            }
+        }
+        a.nation-link { 
+            &:after { 
+                content: "NATION"; 
+            }
+        }
+
+        a.active{
+            svg{
+                color: #fff; 
+            }
+        }
+    }
+}
+.hamburger-icon, 
+.close-icon { 
+    display: none;
+}
+@media screen and (max-width: 1000px){
+    .nav-bar{
+        position: initial; 
+        height: auto; 
+        min-height: auto;
+
+        nav{
+            display: none;
+        }
+
+        nav{
+            width: 100%; 
+            height: 140px;
+            background: #184E77;
+            top: 0; 
+            left: 0; 
+            position: fixed; 
+            z-index: 2; 
+            margin: 0;
+
+            a {
+                display: flex; 
+                padding-left: 35%; 
+                margin: 4px;
+            }
+
+            a:after{
+                opacity: 1;
+                position: initial;
+                width: auto;
+                margin-left: 10px;
+            }
+
+            a svg {
+                opacity: 1 !important;
+            }
+
+            &.mobile-show { 
+                display: block;
+            }
+        }
+        .hamburger-icon, 
+        .close-icon {
+            display: block;
+            position: absolute; 
+            top: 15px; 
+            right: 15px; 
+        }
+
+    }
+  }
+  

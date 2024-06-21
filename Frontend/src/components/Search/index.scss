@@ -1,0 +1,42 @@
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin-left: 80px;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 24px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  button {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #357ae8;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  @media screen and (max-width: 1000px){
+    .search-bar {
+        margin-left: 0;
+      }
+  }

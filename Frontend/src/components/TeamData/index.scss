@@ -1,0 +1,64 @@
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.table-container {
+  .page-title{
+    font-size: 60px;
+  }
+  margin: 120px 20px;
+  font-family: Arial, sans-serif;
+  opacity: 0;
+  margin-bottom: 10px;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #ccc;
+      text-align: left;
+      color: #333;
+      font-weight: 400;
+      font-size: 14px;
+    }
+
+    th {
+      background-color: #333;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tr:hover {
+      background-color: #ddd;
+    }
+  }
+}
+
+.show-more-button {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  margin-top: 10px;
+}
+
+.table-container:not(.loading),
+.show-more-button:not(.loading) {
+  opacity: 1;
+}

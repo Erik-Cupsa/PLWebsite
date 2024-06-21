@@ -1,0 +1,22 @@
+html {
+  font-size: 62.5%; 
+}
+
+body {
+  margin: 0;
+  font-family: 300 11px/1.4 'Red Hat Display', 'sans-serif'; 
+  color: #fff;
+  background: #52B69A;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #fff; 
+  border-radius: 5px;
+}
